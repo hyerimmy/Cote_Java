@@ -34,7 +34,7 @@ public class s11286_절대값힙 {
             st = new StringTokenizer(bf.readLine());
             inputN = Integer.parseInt(st.nextToken());
             if (inputN == 0){
-                if (queue.size() == 0) System.out.println(0);
+                if (queue.isEmpty()) System.out.println(0);
                 else System.out.println(queue.poll());
             }
             else {
