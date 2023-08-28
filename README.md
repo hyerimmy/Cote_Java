@@ -5,5 +5,3 @@
 - b : bronze
 - s : silver
 - g : gold
-
-![image](https://github.com/hyerimmy/Cote_Java/assets/70644449/d08227b2-a130-4eb1-8e3f-43f28433689a)
