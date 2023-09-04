@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
@@ -16,7 +15,7 @@ import java.util.StringTokenizer;
 - BFS 활용<br>
  */
 
-public class s2178_미로탐색 {
+public class s2178_미로탐색_BFS {
     static int[] dx = {0,1,0,-1};
     static int[] dy = {1,0,-1,0};
     static boolean[][] visited;
