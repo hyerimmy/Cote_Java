@@ -38,17 +38,16 @@ public class s2178_미로탐색_BFS {
             }
         }
 
-        BFS(0,0);
+        BFS();
         System.out.println(A[N-1][M-1]);
 
     }
 
-    private static void BFS(int i, int j){
+    private static void BFS(){
         Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[] {i,j});
+        queue.offer(new int[] {0,0});
         while(!queue.isEmpty()){
             int[] now = queue.poll();
-            visited[i][j] = true;
             for(int k=0; k<4; k++){
                 int x = now[0] + dx[k];
                 int y = now[1] + dy[k];
