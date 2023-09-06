@@ -10,7 +10,7 @@ import java.util.*;
  * - Hash 활용 <br>
  * */
 
-class Lv3_베스트앨범 {
+class Lv3_베스트앨범_HASH {
     public static void main(String[] args) {
         String[] genres = {"classic", "pop", "classic", "classic", "pop"};
         int[] plays = {500, 600, 150, 800, 2500};
