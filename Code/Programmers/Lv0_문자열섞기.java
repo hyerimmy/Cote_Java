@@ -11,8 +11,10 @@ import java.util.Scanner;
  * */
 
 class Lv0_문자열섞기 {
+    public static void main(String[] args) {
+    }
 
-    public static String main(String str1, String str2) {
+    public static String solution(String str1, String str2) {
         String answer = "";
         for(int i=0; i<str1.length();i++){
             answer += str1.charAt(i);
