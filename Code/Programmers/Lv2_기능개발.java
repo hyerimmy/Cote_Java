@@ -1,9 +1,6 @@
 package Programmers;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @title Lv2 기능개발
@@ -22,6 +19,10 @@ class Lv2_기능개발 {
         for(int i=0; i<progresses.length;i++){
             Q.offer((int)(Math.ceil((double)(100-progresses[i])/speeds[i])));
         }
+
+
+        int[] temp = { 1123, 1412, 23, 44, 512132 };
+        ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(temp));
 
         List<Integer> answer = new ArrayList<>();
         int days=0;
