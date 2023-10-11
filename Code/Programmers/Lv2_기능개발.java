@@ -22,7 +22,6 @@ class Lv2_기능개발 {
 
 
         int[] temp = { 1123, 1412, 23, 44, 512132 };
-        ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(temp));
 
         List<Integer> answer = new ArrayList<>();
         int days=0;
