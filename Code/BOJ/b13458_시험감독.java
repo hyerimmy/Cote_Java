@@ -11,6 +11,7 @@ import java.util.StringTokenizer;
  * @date 2023.10.14
  * @notes
  * - SSAFY 기출<br>
+ * - 결과값은 int가 아닐 수 있으니 long으로 정의하기!!! 주의!!
  */
 
 public class b13458_시험감독 {
@@ -30,7 +31,7 @@ public class b13458_시험감독 {
         int B = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
 
-        int result = 0;
+        long result = 0;
         for (int studentN : A) {
             result+=1;
             if(studentN > B){
