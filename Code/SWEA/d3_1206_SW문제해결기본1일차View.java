@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @notes
  */
 
-public class d2_1206_SW문제해결기본1일차View {
+public class d3_1206_SW문제해결기본1일차View {
     public static void main(String args[]) throws Exception
     {
         Scanner sc = new Scanner(System.in);
