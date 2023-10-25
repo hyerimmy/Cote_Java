@@ -13,7 +13,7 @@ import java.util.*;
 
  */
 
-public class g7576_토마토 {
+public class g5_7576_토마토 {
     static int N;
     static int M;
     static int[][] B;
