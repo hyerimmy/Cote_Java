@@ -1,7 +1,5 @@
 package BOJ;
 
-import jdk.jfr.Frequency;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
