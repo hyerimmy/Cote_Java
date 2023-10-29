@@ -15,11 +15,13 @@ import java.util.*;
  * - 왜 에러나는지 모르겠다~ 아~
  * - 가장 좋아하는 선수인 1번 선수를 4번 타자로 미리 결정 -> 1번 사람을 4번째로 (문제 해석 잘못해서 오류났었던)
  * - ㅎㅎ 시간초과? 장난하나..
+ * - 시간초과의 이유!!!!!! -> Queue는 시간복잡도가 큰 편이니까 가능하면 배열이나 배열리스트 사용하기!!!!! <-
  */
 
-public class failed_g4_17281_야구공이모지 {
+public class g4_17281_야구공이모지 {
     public static int N;
     public static int[][] S;
+    public static int maxScore = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -27,37 +29,26 @@ public class failed_g4_17281_야구공이모지 {
         N = Integer.parseInt(st.nextToken());
 
         S = new int[N][9];
-        for(int n=0; n<N; n++){
+        for(int[] sUnit : S){
             st = new StringTokenizer(br.readLine());
             for(int i=0; i<9; i++){
-                S[n][i] = Integer.parseInt(st.nextToken());
+                sUnit[i] = Integer.parseInt(st.nextToken());
             }
         }
 
         // player setting
-        int maxScore = 0;
         Queue<PlayerSetting> Q = new LinkedList<>();
         Q.add(new PlayerSetting());
         while(!Q.isEmpty()){
             PlayerSetting ps = Q.poll();
-            if(ps.playerOrder.size()==9){
+            if(ps.completeCnt==9){
                 // play and update maxScore
-                int playScore = getPlayScore(ps.playerOrder);
-                if(playScore==48){
-                    getPlayScore(ps.playerOrder);
-                }
-                if(maxScore < getPlayScore(ps.playerOrder)) maxScore=playScore;
+                calculatePlayScore(ps.playerOrder);
             }
             else{
-                //1번 사람을 4번째로
-                if(ps.playerOrder.size()==3){
-                    Q.add(ps.setPlayerOrder(0));
-                }
-                else{
-                    for(int playerIdx=0; playerIdx<9; playerIdx++){
-                        if(!ps.playerUsed[playerIdx]){
-                            Q.add(ps.setPlayerOrder(playerIdx));
-                        }
+                for(int playerIdx=0; playerIdx<9; playerIdx++){
+                    if(!ps.playerUsed[playerIdx]){
+                        Q.add(ps.setPlayerOrder(playerIdx));
                     }
                 }
             }
@@ -66,65 +57,71 @@ public class failed_g4_17281_야구공이모지 {
         System.out.println(maxScore);
     }
 
-    public static int getPlayScore(ArrayList<Integer> P){
+    public static void calculatePlayScore(int[] P){
         int scoreSum = 0;
         int playerIdx = 0;
-        Queue<Integer> ru = new LinkedList<>();
+        boolean[] ru;
         for(int ining=0; ining<N; ining++){
+            if(maxScore>scoreSum+(N-ining)*24) break;
             int outCnt = 0;
-            ru.clear();
+            ru = new boolean[3];
             while(outCnt<3){
-                int player = P.get(playerIdx);
+                int player = P[playerIdx];
                 int score = S[ining][player];
 
                 if (score == 0) { //아웃
                     outCnt++;
-                } else if(score == 4){ //홈런
-                    scoreSum+=ru.size()+1;
-                    ru.clear();
                 }else {
-                    int ruSize = ru.size();
-                    for (int i=0; i<ruSize; i++) {
-                        int ruScore = ru.poll();
-                        if (ruScore + score > 3) {
-                            scoreSum++;
-                        }
-                        else {
-                            ru.add(ruScore + score);
+                    for(int i=2; i>=0; i--){
+                        if(ru[i]){
+                            if(i+score > 2){
+                                scoreSum++;
+                            }
+                            else{
+                                ru[i+score]=true;
+                            }
+                            ru[i]=false;
                         }
                     }
-                    ru.add(score);
+                    if(score==4) scoreSum++;
+                    else ru[score-1]=true;
                 }
                 playerIdx++;
                 if(playerIdx==9) playerIdx=0;
             }
         }
-        return scoreSum;
+        if(maxScore < scoreSum) maxScore=scoreSum;
     }
 }
 
 class PlayerSetting{
     boolean[] playerUsed;
-    ArrayList<Integer> playerOrder;
+    int[] playerOrder;
+    int completeCnt;
 
     public PlayerSetting(){
         playerUsed = new boolean[9];
-        playerOrder = new ArrayList<>();
+        playerOrder = new int[9];
+        completeCnt = 0;
 
         //1번 사람을 4번째로
         playerUsed[0] = true;
+        playerOrder[3] = 0;
+        ++completeCnt;
     }
 
-    public PlayerSetting(boolean[] playerUsed, ArrayList<Integer> playerOrder){
+    public PlayerSetting(boolean[] playerUsed, int[] playerOrder, int completeCnt){
         this.playerUsed = playerUsed;
         this.playerOrder = playerOrder;
+        this.completeCnt = completeCnt;
     }
 
     public PlayerSetting setPlayerOrder(int playerIdx){
         boolean[] newPlayerUsed = playerUsed.clone();
-        ArrayList<Integer> newPlayerOrder = new ArrayList<>(playerOrder);
+        int[] newPlayerOrder = playerOrder.clone();
         newPlayerUsed[playerIdx] = true;
-        newPlayerOrder.add(playerIdx);
-        return new PlayerSetting(newPlayerUsed, newPlayerOrder);
+        if(completeCnt<4) newPlayerOrder[completeCnt-1]=playerIdx;
+        else newPlayerOrder[completeCnt]=playerIdx;
+        return new PlayerSetting(newPlayerUsed, newPlayerOrder, completeCnt+1);
     }
 }
