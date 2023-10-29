@@ -7,7 +7,7 @@ import java.util.*;
 
 /**
  * @link https://www.acmicpc.net/problem
- * @date 2023.10.28
+ * @date 2023.10.28 ~ 29
  * @notes
  * - 골드 따자<br>
  * - 9명인데 4번타자 고정, 8명 정렬 경우의 수는 40320, N이닝이니까 -> 40320N
