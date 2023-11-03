@@ -43,6 +43,7 @@ public class Lv2_장애물인식프로그램 {
         }
 
         System.out.println(answerL.size());
+        Collections.sort(answerL);
         for (int count : answerL)
             System.out.println(count);
     }
