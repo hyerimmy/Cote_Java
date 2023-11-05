@@ -12,7 +12,7 @@ import java.util.Scanner;
 - sort 정렬 활용<br>
  */
 
-public class s1427_소트인사이드 {
+public class s5_1427_소트인사이드 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         String N = sc.next();

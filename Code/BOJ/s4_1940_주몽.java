@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
 - 투포인터 알고리즘 활용<br>
  */
 
-public class s1940_주몽 {
+public class s4_1940_주몽 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());

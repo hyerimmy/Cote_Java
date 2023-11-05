@@ -13,7 +13,7 @@ import java.util.*;
 - 스택/큐 활용<br>
  */
 
-public class s11286_절대값힙 {
+public class s1_11286_절대값힙 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

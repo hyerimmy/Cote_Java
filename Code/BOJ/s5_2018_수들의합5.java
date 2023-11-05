@@ -11,7 +11,7 @@ import java.util.Scanner;
 - 투포인터 알고리즘 활용<br>
  */
 
-public class s2018_수들의합5 {
+public class s5_2018_수들의합5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();

@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
  * - SSAFY 기출문제 <br>
  */
 
-public class b10820_문자열분석 {
+public class b2_10820_문자열분석 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 

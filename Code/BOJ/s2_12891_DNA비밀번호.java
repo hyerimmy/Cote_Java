@@ -2,12 +2,8 @@ package BOJ;
 
 
 import java.io.BufferedReader;
-import java.io.CharArrayWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.StringTokenizer;
 
 /**
@@ -18,7 +14,7 @@ import java.util.StringTokenizer;
 - 슬라이딩 윈도우 알고리즘 활용<br>
  */
 
-public class s12891_DNA비밀번호 {
+public class s2_12891_DNA비밀번호 {
 
     static int[] current_cnt = new int[4];
     static int[] min_cnt = new int[4];

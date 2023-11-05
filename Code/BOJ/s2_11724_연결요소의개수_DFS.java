@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 - DFS 총 수행 회수 = 연결 요소 개수(답) <br>
  */
 
-public class s11724_연결요소의개수_DFS {
+public class s2_11724_연결요소의개수_DFS {
     static boolean[] visited;
     static ArrayList<Integer>[] A;
     public static void main(String[] args) throws IOException {

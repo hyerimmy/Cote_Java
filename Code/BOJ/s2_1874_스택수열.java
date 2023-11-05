@@ -16,7 +16,7 @@ import java.util.List;
 - 스택의 개념을 정확히 알고 있다면 풀 수 있는 문제<br>
  */
 
-public class s1874_스택수열 {
+public class s2_1874_스택수열 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

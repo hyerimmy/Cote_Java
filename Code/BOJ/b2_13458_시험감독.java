@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  * - 결과값은 int가 아닐 수 있으니 long으로 정의하기!!! 주의!!
  */
 
-public class b13458_시험감독 {
+public class b2_13458_시험감독 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

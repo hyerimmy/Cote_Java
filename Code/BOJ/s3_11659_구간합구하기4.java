@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 - 숫자 덧셈, 곱셈 연산을 할 때에는 숫자가 많이 커질 수 있으니 습관적으로 long 타입 선언<br>
  */
 
-public class s11659_구간합구하기4 {
+public class s3_11659_구간합구하기4 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(bf.readLine());

@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
  * - N의 범위가 굉장히 작기 때문에 n^2의 복잡도를 가져도 크게 부담되지 않음.<br>
  */
 
-public class b2750_수정렬하기 {
+public class b2_2750_수정렬하기 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

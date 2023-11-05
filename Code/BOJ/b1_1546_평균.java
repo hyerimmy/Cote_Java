@@ -11,7 +11,7 @@ import java.util.Scanner;
  * - 문법 익히기 위해 배열로 저장해서 풀이함. 효율을 높이기<br>
  */
 
-public class b1546_평균 {
+public class b1_1546_평균 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();

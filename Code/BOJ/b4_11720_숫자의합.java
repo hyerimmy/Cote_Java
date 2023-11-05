@@ -11,7 +11,7 @@ import java.util.Scanner;
  * - `toCharArray` 함수를 활용해 숫자를 배열로 변환<br>
  */
 
-public class b11720_숫자의합 {
+public class b4_11720_숫자의합 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

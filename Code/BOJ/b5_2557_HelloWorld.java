@@ -9,7 +9,7 @@ package BOJ;
  * - import도 누락하지 않고 모두 복붙해야 함<br>
  */
 
-public class b2557_HelloWorld {
+public class b5_2557_HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

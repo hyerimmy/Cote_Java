@@ -12,7 +12,7 @@ import java.util.*;
 - 큐의 개념을 정확히 알고 있다면 풀 수 있는 문제<br>
  */
 
-public class s2164_카드2 {
+public class s4_2164_카드2 {
 
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);

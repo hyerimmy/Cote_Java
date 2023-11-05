@@ -12,7 +12,7 @@ import java.util.Scanner;
  * - 문법 익히기 위해 배열로 저장해서 풀이함. 효율을 높이기<br>
  */
 
-public class b2596_비밀편지 {
+public class b1_2596_비밀편지 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
