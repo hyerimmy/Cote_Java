@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 /**
  * @link https://www.acmicpc.net/problem
- * @date 2023.11.21.
+ * @date 2023.11.26.
  * @notes - 에센셜3++ <br>
  * - 오른쪽 0123 -R->  1230 인 경우를 제대로 처리하지 못했음. <br>
  */
