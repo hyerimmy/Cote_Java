@@ -7,6 +7,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+
+/**
+ * @link https://www.acmicpc.net/problem
+ * @date 2023.11.27
+ * @notes - 에센셜3++<br>
+ */
 public class s2_21736_헌내기는친구가필요해 {
     public static char[][] campus;
     public static boolean[][] visited;
