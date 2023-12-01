@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 - 자바의 기본 정렬 함수는 nlogn 시간복잡도를 가짐. -> 2nlogn -> nlogn <br>
  */
 
-public class s4_1920_원하는정수찾기 {
+public class s4_1920_원하는정수찾기_이진탐색 {
 
 
     public static void main(String[] args) throws IOException {
