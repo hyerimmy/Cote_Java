@@ -8,14 +8,12 @@ import java.util.StringTokenizer;
 /**
  * @link https://www.acmicpc.net/problem
  * @date 2023.12.04.
- * @notes
- * - 백트래킹 연습!! 백트래킹 뿌숴야지 <br>
+ * @notes - 백트래킹 연습!! 백트래킹 뿌숴야지 <br>
  */
 
-public class s3_15649_N과M1 {
+public class s3_15651_N과M3 {
     public static int N;
     public static int M;
-    public static boolean[] visit;
     public static int[] answers;
     public static StringBuilder sb = new StringBuilder();
 
@@ -26,7 +24,6 @@ public class s3_15649_N과M1 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
-        visit = new boolean[N + 1];
         answers = new int[M];
 
         BT(0);
@@ -42,12 +39,8 @@ public class s3_15649_N과M1 {
         }
 
         for (int n = 1; n <= N; n++) {
-            if (!visit[n]) {
-                answers[depth] = n;
-                visit[n] = true;
-                BT(depth + 1);
-                visit[n] = false;
-            }
+            answers[depth] = n;
+            BT(depth + 1);
         }
     }
 }
