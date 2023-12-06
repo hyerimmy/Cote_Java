@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
 - BFS 활용<br>
  */
 
-public class s1_2178_미로탐색_BFS {
+public class s1_2178_미로탐색__BFS {
     static int[] dx = {0,1,0,-1};
     static int[] dy = {1,0,-1,0};
     static boolean[][] visited;
