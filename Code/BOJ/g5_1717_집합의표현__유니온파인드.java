@@ -9,8 +9,7 @@ import java.util.StringTokenizer;
 /**
  * @link https://www.acmicpc.net/problem
  * @date 2023.12.06
- * @notes - 에센셜4<br>
- * - 유니온파인드 예제<br>
+ * @notes - 유니온파인드 예제<br>
  */
 
 public class g5_1717_집합의표현__유니온파인드 {
@@ -40,7 +39,7 @@ public class g5_1717_집합의표현__유니온파인드 {
                 union(a, b);
 
             } else { // 두 원소 같은지 확인
-                if(checkSame(a,b))
+                if (checkSame(a, b))
                     sb.append("YES").append("\n");
                 else
                     sb.append("NO").append("\n");

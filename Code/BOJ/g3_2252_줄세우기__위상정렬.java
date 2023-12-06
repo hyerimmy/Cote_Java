@@ -8,8 +8,7 @@ import java.util.*;
 /**
  * @link https://www.acmicpc.net/problem
  * @date 2023.12.06
- * @notes - 에센셜4<br>
- * - 유니온파인드 예제<br>
+ * @notes - 위상정렬 예제<br>
  */
 
 public class g3_2252_줄세우기__위상정렬 {
@@ -29,7 +28,7 @@ public class g3_2252_줄세우기__위상정렬 {
         }
 
         // 그래프 연결
-        for(int m=0; m<M; m++){
+        for (int m = 0; m < M; m++) {
             st = new StringTokenizer(br.readLine());
             int S = Integer.parseInt(st.nextToken());
             int E = Integer.parseInt(st.nextToken());
@@ -40,18 +39,18 @@ public class g3_2252_줄세우기__위상정렬 {
         // 위상정렬 실행
         StringBuilder sb = new StringBuilder();
         Queue<Integer> queue = new LinkedList<>();
-        for(int i=1; i<=N; i++){
-            if(indegree[i] == 0){
+        for (int i = 1; i <= N; i++) {
+            if (indegree[i] == 0){
                 queue.add(i);
             }
         }
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int now = queue.poll();
             sb.append(now).append(" ");
 
-            for(int next : graph.get(now)){
+            for (int next : graph.get(now)) {
                 indegree[next]--;
-                if(indegree[next] == 0)
+                if (indegree[next] == 0)
                     queue.add(next);
             }
         }
