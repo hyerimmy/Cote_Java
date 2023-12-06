@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  * - 발전하려면 알고리즘을 적용시키자. DP 적용시키는 연습 제발하자
  */
 
-public class s3_1463_1로만들기_DP {
+public class s3_1463_1로만들기__DP {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

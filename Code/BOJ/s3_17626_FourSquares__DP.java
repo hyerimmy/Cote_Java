@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  * - 발전하려면 알고리즘을 적용시키자. DP 응용 .. 또 어렵네 호~
  */
 
-public class s3_17626_FourSquares_DP {
+public class s3_17626_FourSquares__DP {
 
     public static int N;
     public static int[] dp = new int[50001];

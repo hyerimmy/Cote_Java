@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * - 백트래킹 연습!! 백트래킹 뿌숴야지 <br>
  */
 
-public class s3_15649_N과M1_백트래킹 {
+public class s3_15649_N과M1__백트래킹 {
     public static int N;
     public static int M;
     public static boolean[] visit;

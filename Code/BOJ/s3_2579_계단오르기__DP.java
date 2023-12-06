@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  * - 발전하려면 알고리즘을 적용시키자. DP 응용 굳히기
  */
 
-public class s3_2579_계단오르기_DP {
+public class s3_2579_계단오르기__DP {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

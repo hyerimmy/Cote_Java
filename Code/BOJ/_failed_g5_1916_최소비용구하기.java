@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
  * @notes - 에센셜4 <br>
  */
 
-public class failed_g5_1916_최소비용구하기 {
+public class _failed_g5_1916_최소비용구하기 {
     public static long[] dp;
     public static boolean[] visited;
     public static List<List<Bus>> arriveBusList = new ArrayList<>();
