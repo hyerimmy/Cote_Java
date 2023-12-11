@@ -69,7 +69,7 @@ public class g4_1043_거짓말 {
             result = M;
         else {
             // 대표값 정돈하기
-            int primaryParent = find(knowPrimary]);
+            int primaryParent = find(knowPrimary);
             // 파티 전체 탐색하며 거짓말 파티 수 계산
             for (List<Integer> members : partyMembers) {
                 result++;
