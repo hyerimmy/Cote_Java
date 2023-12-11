@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  * @notes - 집합을 합쳐나가는 Union find 로 풀어보자. <br>
  * - union find의 진짜 중요한 포인트!!! 같은 집합인지 확인하려면  <br>
  * - prent[a] == parent[b] (x) <br>
- * - find(a) == find(b) (x) <br>
+ * - find(a) == find(b) (o) <br>
  */
 
 public class g4_1043_거짓말 {
