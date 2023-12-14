@@ -10,6 +10,8 @@ import java.util.*;
  * @link https://www.acmicpc.net/problem
  * @date 2023.12.14.
  * @notes - 이진트리 예제<br>
+ * - 무조건 1차원 배열이 아니라, 왼 오 구분되어야 할 때는 2차원 배열로 왼오 구분해서 저장 <br>
+ * - 이진트리라고 무조건 Index/2 이런거 쓰지 않아도 됨 <br>
  */
 public class s1_1991_트리순회__이진트리 {
     public static int N;
