@@ -71,17 +71,17 @@ public class g5_9205_맥주마시면서걸어가기 {
     ){
         return Math.abs(end[0]-start[0])+Math.abs(end[1]-start[1])<=bottleCnt*50;
     }
-}
 
-class State{
-    int[] P;
-    int bottleCnt;
-    boolean[] visitedStore;
+    public static class State{
+        int[] P;
+        int bottleCnt;
+        boolean[] visitedStore;
 
-    public State(int[] P, int bottleCnt, boolean[] visitedStore){
-        this.P=P;
-        this.bottleCnt=bottleCnt;
-        this.visitedStore =visitedStore;
+        public State(int[] P, int bottleCnt, boolean[] visitedStore){
+            this.P=P;
+            this.bottleCnt=bottleCnt;
+            this.visitedStore =visitedStore;
+        }
+
     }
-
 }

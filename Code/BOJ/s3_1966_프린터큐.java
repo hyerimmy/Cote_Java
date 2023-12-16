@@ -1,5 +1,6 @@
 package BOJ;
 
+import java.awt.print.Paper;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -60,22 +61,22 @@ public class s3_1966_프린터큐 {
         }
 
     }
-}
 
-class Paper {
-    int index;
-    int value;
+    public static class Paper {
+        int index;
+        int value;
 
-    public Paper(int index, int value) {
-        this.index = index;
-        this.value = value;
-    }
+        public Paper(int index, int value) {
+            this.index = index;
+            this.value = value;
+        }
 
-    public int compareTo(Paper p){
-        if(this.value < p.value)
-            return 1;
-        if(this.value > p.value)
-            return -1;
-        return 0;
+        public int compareTo(Paper p){
+            if(this.value < p.value)
+                return 1;
+            if(this.value > p.value)
+                return -1;
+            return 0;
+        }
     }
 }

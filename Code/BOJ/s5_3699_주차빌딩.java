@@ -59,14 +59,14 @@ public class s5_3699_주차빌딩 {
             System.out.println(answer);
         }
     }
-}
 
-class Car {
-    int h;
-    int l;
+    public static class Car {
+        int h;
+        int l;
 
-    public Car(int h, int l) {
-        this.h = h;
-        this.l = l;
+        public Car(int h, int l) {
+            this.h = h;
+            this.l = l;
+        }
     }
 }

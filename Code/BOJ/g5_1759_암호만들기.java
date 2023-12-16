@@ -74,17 +74,16 @@ public class g5_1759_암호만들기 {
     public static boolean isMoum(char C){
         return (C=='a' || C=='e' || C=='i' || C=='o' || C=='u');
     }
-}
 
-class pwSet{
-    String pwS;
-    int moCnt;
-    int jaCnt;
+    public static class pwSet{
+        String pwS;
+        int moCnt;
+        int jaCnt;
 
-    public pwSet(String pwS, int moCnt, int jaCnt){
-        this.pwS = pwS;
-        this.moCnt = moCnt;
-        this.jaCnt = jaCnt;
+        public pwSet(String pwS, int moCnt, int jaCnt){
+            this.pwS = pwS;
+            this.moCnt = moCnt;
+            this.jaCnt = jaCnt;
+        }
     }
 }
-

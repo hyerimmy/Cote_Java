@@ -44,15 +44,14 @@ public class g5_2493_탑 {
             S.push(new Top(i+1, height));
         }
     }
-}
 
-class Top{
-    int idx;
-    int height;
+    public static class Top{
+        int idx;
+        int height;
 
-    public Top(int idx, int height){
-        this.idx=idx;
-        this.height=height;
+        public Top(int idx, int height){
+            this.idx=idx;
+            this.height=height;
+        }
     }
 }
-

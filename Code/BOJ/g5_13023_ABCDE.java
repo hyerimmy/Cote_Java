@@ -68,16 +68,15 @@ public class g5_13023_ABCDE {
             }
         }
     }
-}
 
-class Friend{
-    boolean[] visitedNode;
-    int visitedCnt;
-    int currentNode;
-    public Friend(boolean[] visitedNode, int visitedCnt, int currentNode){
-        this.visitedNode = visitedNode;
-        this.visitedCnt = visitedCnt;
-        this.currentNode = currentNode;
+    public static class Friend{
+        boolean[] visitedNode;
+        int visitedCnt;
+        int currentNode;
+        public Friend(boolean[] visitedNode, int visitedCnt, int currentNode){
+            this.visitedNode = visitedNode;
+            this.visitedCnt = visitedCnt;
+            this.currentNode = currentNode;
+        }
     }
 }
-

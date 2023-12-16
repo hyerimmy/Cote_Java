@@ -92,36 +92,36 @@ public class g4_17281_야구공이모지 {
         }
         if(maxScore < scoreSum) maxScore=scoreSum;
     }
-}
 
-class PlayerSetting{
-    boolean[] playerUsed;
-    int[] playerOrder;
-    int completeCnt;
+    public static class PlayerSetting{
+        boolean[] playerUsed;
+        int[] playerOrder;
+        int completeCnt;
 
-    public PlayerSetting(){
-        playerUsed = new boolean[9];
-        playerOrder = new int[9];
-        completeCnt = 0;
+        public PlayerSetting(){
+            playerUsed = new boolean[9];
+            playerOrder = new int[9];
+            completeCnt = 0;
 
-        //1번 사람을 4번째로
-        playerUsed[0] = true;
-        playerOrder[3] = 0;
-        ++completeCnt;
-    }
+            //1번 사람을 4번째로
+            playerUsed[0] = true;
+            playerOrder[3] = 0;
+            ++completeCnt;
+        }
 
-    public PlayerSetting(boolean[] playerUsed, int[] playerOrder, int completeCnt){
-        this.playerUsed = playerUsed;
-        this.playerOrder = playerOrder;
-        this.completeCnt = completeCnt;
-    }
+        public PlayerSetting(boolean[] playerUsed, int[] playerOrder, int completeCnt){
+            this.playerUsed = playerUsed;
+            this.playerOrder = playerOrder;
+            this.completeCnt = completeCnt;
+        }
 
-    public PlayerSetting setPlayerOrder(int playerIdx){
-        boolean[] newPlayerUsed = playerUsed.clone();
-        int[] newPlayerOrder = playerOrder.clone();
-        newPlayerUsed[playerIdx] = true;
-        if(completeCnt<4) newPlayerOrder[completeCnt-1]=playerIdx;
-        else newPlayerOrder[completeCnt]=playerIdx;
-        return new PlayerSetting(newPlayerUsed, newPlayerOrder, completeCnt+1);
+        public PlayerSetting setPlayerOrder(int playerIdx){
+            boolean[] newPlayerUsed = playerUsed.clone();
+            int[] newPlayerOrder = playerOrder.clone();
+            newPlayerUsed[playerIdx] = true;
+            if(completeCnt<4) newPlayerOrder[completeCnt-1]=playerIdx;
+            else newPlayerOrder[completeCnt]=playerIdx;
+            return new PlayerSetting(newPlayerUsed, newPlayerOrder, completeCnt+1);
+        }
     }
 }

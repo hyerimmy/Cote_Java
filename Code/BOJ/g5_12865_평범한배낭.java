@@ -48,14 +48,14 @@ public class g5_12865_평범한배낭 {
         }
         System.out.print(DP[N][K]);
     }
-}
 
-class Item {
-    public int w;//무게
-    public int v;//가치
+    public static class Item {
+        public int w;//무게
+        public int v;//가치
 
-    public Item(int w, int v) {
-        this.w = w;
-        this.v = v;
+        public Item(int w, int v) {
+            this.w = w;
+            this.v = v;
+        }
     }
 }
