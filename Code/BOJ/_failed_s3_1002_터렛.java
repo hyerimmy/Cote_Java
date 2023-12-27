@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * @notes - 기하학 <br>
  */
 
-public class __failed_s3_1002_터렛 {
+public class _failed_s3_1002_터렛 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
