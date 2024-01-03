@@ -49,7 +49,7 @@ public class g4_3190_뱀 {
 
         while (move()) {
             time++;
-            System.out.println(time);
+//            System.out.println(time);
         }
 
         System.out.println(time + 1);
@@ -69,8 +69,8 @@ public class g4_3190_뱀 {
 
         // 새로 이동한 좌표 계산
         int[] S = new int[]{snakeHead[0] + dRow[dIndex], snakeHead[1] + dColumn[dIndex]};
+//        System.out.println(time+1 + " "+Arrays.toString(S));
 
-        System.out.println(Arrays.toString(S));
         // 범위를 벗어난다면 종료
         if (S[0] < 1 || S[0] > N || S[1] < 1 || S[1] > N)
             return false;
@@ -79,16 +79,16 @@ public class g4_3190_뱀 {
         if (board[S[0]][S[1]] == 2)
             return false;
 
-        // 뱀 몸 좌표 갱신
-        board[S[0]][S[1]] = 0;
-        snakeBody.add(S);
-        snakeHead = S;
-
         // 만약 사과가 없다면 뱀 꼬리 자르기
-        if (board[S[0]][S[1]] == 1) {
+        if (board[S[0]][S[1]] != 1) {
             int[] snakeTail = snakeBody.poll();
             board[snakeTail[0]][snakeTail[1]] = 0;
         }
+
+        // 뱀 몸 좌표 갱신
+        board[S[0]][S[1]] = 2;
+        snakeBody.add(S);
+        snakeHead = S;
 
         return true;
     }
