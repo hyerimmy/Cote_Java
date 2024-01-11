@@ -12,7 +12,6 @@ import java.util.*;
  */
 
 public class s4_1026_보물 {
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
