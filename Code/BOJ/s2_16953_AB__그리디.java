@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  * - *그리디포인트* 뒤에서부터 계산했을 때 (1)짝수, (2) 10x+1꼴인지 확인해서 계산<br>
  */
 
-public class s2_16953_AB_그리디 {
+public class s2_16953_AB__그리디 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
