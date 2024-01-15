@@ -43,7 +43,7 @@ class Lv3_아이템줍기 {
     }
 
     private static void setRectangle(int minX, int minY, int maxX, int maxY){
-        // 1 : 내부, 2 ~ : 테두리
+        // 1 : 내부, 2 : 테두리
         for(int y = minY; y <= maxY; y++){
             for(int x = minX; x <= maxX; x++){
                 // 다른 사각형의 내부라면 테두리 처리하지 않는다.
