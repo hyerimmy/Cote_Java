@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * @title Lv3 아이템 줍기
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/87694
- * @date 2023.09.12
+ * @date 2023.09.12 / 2024.01.15
  * @notes
  * - BFS활용 <br>
  * - 예제 1번에 (3,5) -> (3,6)으로 가는 문제 때문에 점수 깎임. (길이 아닌 것 구분 못함) <br>
