@@ -9,8 +9,7 @@ import java.util.Queue;
  * @title Lv2 더맵게
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/42626
  * @date 2024.01.17
- * @notes
- * - 힙 <br>
+ * @notes - 힙 <br>
  * - 예외처리 제대로 못함. (0 반환인 경우, 즉 처음부터 완성형인 경우) <br>
  */
 
@@ -19,7 +18,7 @@ class Lv2_더맵게 {
 //        String[][] tickets = {{"ICN", "JFK"},{"HND", "IAD"},{"JFK", "HND"}};
 //        System.out.println(Arrays.toString(solution(tickets)));
 
-        int[][] rectangle = {{1,1,7,4},{3,2,5,5},{4,3,6,9},{2,6,8,8}};
+        int[][] rectangle = {{1, 1, 7, 4}, {3, 2, 5, 5}, {4, 3, 6, 9}, {2, 6, 8, 8}};
         System.out.println(solution(new int[]{1, 2, 3, 9, 10, 12}, 7));
     }
 
@@ -27,7 +26,7 @@ class Lv2_더맵게 {
         PriorityQueue<Integer> PQ = new PriorityQueue<>();
 
         // 초기값 입력
-        for(int number : scoville){
+        for (int number : scoville) {
             PQ.add(number);
         }
 
@@ -39,7 +38,7 @@ class Lv2_더맵게 {
             return 0;
 
         // 스코빌 지수 업데이트
-        while(PQ.size() >= 2) {
+        while (PQ.size() >= 2) {
             // 음식 섞어서 넣기
             answer++;
             PQ.add(PQ.poll() + (PQ.poll() * 2));
