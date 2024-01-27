@@ -11,45 +11,44 @@ import java.util.*;
  * */
 
 class failed_Lv2_소수찾기 {
+    public static int maxN = 10_000_000;
+    public static boolean[] isPrime = new boolean[maxN];
+    public static int answer = 0;
+    public static String N;
+
     public static void main(String[] args) {
     }
 
-    static ArrayList<Integer> answer = new ArrayList<>();
+    public int solution(String numbers) {
+        N = numbers;
 
-    public static int solution(String numbers) {
-        BFS(numbers);
-        return answer.size();
+        // 소수 여부 미리 저장해두기
+        Arrays.fill(isPrime, true);
+        for(int n = 2; n <= Math.sqrt(maxN); n++){
+            checkPrime(n);
+        }
+
+        // 숫자 만들기
+        setNumber(0, 0);
+
+        return answer;
     }
 
-    public static void BFS(String numbers){
-        Queue<String[]> Q = new LinkedList<>();
-        for(int i=0; i<numbers.length(); i++){
-            Q.add(new String[] {
-                    numbers.substring(i,i+1),
-                    numbers.substring(0,i)+numbers.substring(i+1)
-            });
-            System.out.println(numbers.substring(i,i+1)+"/"+numbers.substring(0,i)+numbers.substring(i+1));
-        }
+    public void setNumber(int result){
+        System.out.println(result);
 
-        while(!Q.isEmpty()){
-            String[] N = Q.poll();
-            if(N[1].length()==0){
-                int resultN = Integer.parseInt(N[0]);
-                if(!answer.contains(resultN)){
-                    answer.add(resultN);
-                }
-            }
-            else{
-                for(int i=0; i<N[1].length(); i++){
-                    Q.add(new String[] {
-                            N[0]+N[1].charAt(i),
-                            N[1].substring(0,i)+N[1].substring(i+1)
-                    });
-                    System.out.println(N[0]+N[1].charAt(i)+"/"+N[1].substring(0,i)+N[1].substring(i+1));
-                }
-            }
+        for(int i = startIdx; i < N.length(); i++){
+            setNumber(i+1, result*10 + N.charAt(i) - '0');
         }
+    }
 
+    public void checkPrime(int n){
+        int target = n;
+
+        while(target < maxN){
+            isPrime[target] = false;
+            target += n;
+        }
     }
 }
 
