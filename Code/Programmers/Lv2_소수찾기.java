@@ -5,8 +5,9 @@ import java.util.*;
 /**
  * @title Lv2 소수찾기
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/42839
- * @date 2023.10.09
- * @notes - BFS 활용 <br>
+ * @date 2023.10.09 / 2024.01.27
+ * @notes - BFS 활용 (x) <br>
+ * - 완전탐색 <br>
  */
 
 class Lv2_소수찾기 {
