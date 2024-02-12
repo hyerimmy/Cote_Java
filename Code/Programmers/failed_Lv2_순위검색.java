@@ -7,6 +7,7 @@ import java.util.Arrays;
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/72412
  * @date 2023.08.20
  * @notes - (1차코드) 시간초과 : 효율성 테스트 0점 <br>
+ * - (2차코드) 작성중, 중복적인 체크를 제거하는 방향으로 코드 개선중
  */
 
 class failed_Lv2_순위검색 {
