@@ -6,8 +6,7 @@ import java.util.Arrays;
  * @title Lv2_순위검색
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/72412
  * @date 2023.08.20
- * @notes
- * - (1차코드) 효율성 테스트 0점 -> 40점 <br>
+ * @notes - (1차코드) 시간초과 : 효율성 테스트 0점 <br>
  */
 
 class failed_Lv2_순위검색 {
@@ -17,23 +16,38 @@ class failed_Lv2_순위검색 {
 
         System.out.println(Arrays.toString(solution(info, query)));
     }
+
     public static int[] solution(String[] info, String[] query) {
-        int[] answer = new int[query.length];
-        for (int k=0; k<query.length; k++) {
-            int count = 0;
-            String[] queryData = query[k].split(" ");
+        int[] answers = new int[query.length];
+        Arrays.sort(info);
+
+        for (int k = 0; k < query.length; k++) {
+            int answer = 0;
+            int equalCount = 0;
+            String[] queryData = query[k].split(" and ");
+            System.out.println(Arrays.toString(queryData));
+
             for (String i : info) {
                 String[] infoData = i.split(" ");
-                if (!queryData[0].equals(infoData[0]) && !queryData[0].equals("-")) continue;
-                if (!queryData[2].equals(infoData[1]) && !queryData[2].equals("-")) continue;
-                if (!queryData[4].equals(infoData[2]) && !queryData[4].equals("-")) continue;
-                if (!queryData[6].equals(infoData[3]) && !queryData[6].equals("-")) continue;
-                if (Integer.parseInt(queryData[7]) > Integer.parseInt(infoData[4])) continue;
-                count ++;
+                if (equalCount == 0 && (queryData[0].equals(infoData[0]) || queryData[0].equals("-"))) {
+                    equalCount++;
                 }
-            answer[k] = count;
+                if (equalCount == 1 && (queryData[1].equals(infoData[1]) || queryData[1].equals("-"))) {
+                    equalCount++;
+                }
+                if (equalCount == 2 && (queryData[2].equals(infoData[2]) || queryData[2].equals("-"))) {
+                    equalCount++;
+                }
+                if (equalCount == 3 && (queryData[3].equals(infoData[3]) || queryData[3].equals("-"))) {
+                    equalCount++;
+                }
+                if (equalCount == 4 && (Integer.parseInt(queryData[4]) > Integer.parseInt(infoData[4]))) {
+                    answer++;
+                }
             }
-        return answer;
+            answers[k] = answer;
         }
 
+        return answers;
     }
+}
