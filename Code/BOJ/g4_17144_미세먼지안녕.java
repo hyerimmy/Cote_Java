@@ -12,6 +12,7 @@ import java.util.StringTokenizer;
  * @link https://www.acmicpc.net/problem
  * @date 2024.02.13
  * @notes - 빡구현 + 탐색 <br>
+ * - 구현 까다로운 문제 시간 줄이도록 연습 필요!! <br>
  */
 
 public class g4_17144_미세먼지안녕 {
