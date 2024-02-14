@@ -9,6 +9,7 @@ import java.util.*;
  * @link https://www.acmicpc.net/problem
  * @date 2024.02.14.
  * @notes - 단순 구현 문제 <br>
+ * - 멍청아 continue 말고 break 썼어야지 ^^
  */
 
 public class g4_17140_이차원배열과연산 {
