@@ -18,6 +18,7 @@ public class g4_17140_이차원배열과연산 {
     public static int rMax = 3, cMax = 3;
     public static int R, C, K;
 
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
