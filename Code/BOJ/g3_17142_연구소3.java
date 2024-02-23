@@ -9,10 +9,10 @@ import java.util.*;
  * @link https://www.acmicpc.net/problem
  * @date 2024.02.22
  * @notes - BT + BFS로 풀어보자! <br>
- * - 예제 5번부터 이상함..
+ * - 예제 5번부터 이상함.. -> 탐색불가할 경우 -1 처리 안해서!!
  */
 
-public class failed_g3_17142_연구소3 {
+public class g3_17142_연구소3 {
     public static int N, M;
     public static int[][] map;
     public static int wallCount = 0;
@@ -60,7 +60,9 @@ public class failed_g3_17142_연구소3 {
             if (depth == M - 1) {
                 // 바이러스 퍼뜨림 탐색
 //                System.out.println(Arrays.toString(activeVirusA));
-                minTime = Math.min(minTime, getTime());
+                int time = getTime();
+                if (time != -1)
+                    minTime = Math.min(minTime, time);
                 continue;
             }
             selectActiveVirus(depth + 1, idx + 1);
@@ -133,6 +135,8 @@ public class failed_g3_17142_연구소3 {
 //        }
 //        System.out.println(">>> time : " + time);
 
+        if (virusCount + wallCount != N * N)
+            time = -1;
         return time;
     }
 }
