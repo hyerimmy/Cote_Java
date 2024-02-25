@@ -31,7 +31,7 @@ public class failed_g3_20057_마법사상어와토네이도 {
         }
 
         // 테스트용
-//        int[][] test = new int[N][N];
+        int[][] test = new int[N][N];
 
         // 토네이도
         int row = N / 2;
