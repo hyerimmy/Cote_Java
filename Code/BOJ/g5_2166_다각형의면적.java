@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  * @notes - 신발끈 공식 보고 문제 풀었다!!!<br>
  * - 신발끈 공식이란? 좌표값을 신발끈 형태로 곱해 차이의 1/2하면 다각형 면적을 계산할 수 있다. <br>
  * - https://ko.wikipedia.org/wiki/%EC%8B%A0%EB%B0%9C%EB%81%88_%EA%B3%B5%EC%8B%9D <br>
- * - 계산 시 < A(double) = B(int) * C(int) > 일 경우 -> B*C에서 이미 int overflow 발생해서 A에 이상한 값 들어감..
+ * - 계산 시 < A(long) = B(int) * C(int) > 일 경우 -> B*C에서 이미 int overflow 발생해서 A에 이상한 값 들어감..
  */
 public class g5_2166_다각형의면적 {
     public static void main(String[] args) throws IOException {
