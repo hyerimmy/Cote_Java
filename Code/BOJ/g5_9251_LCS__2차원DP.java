@@ -3,10 +3,6 @@ package BOJ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.StringTokenizer;
 
 /**
  * @link https://www.acmicpc.net/problem/1932
@@ -14,7 +10,7 @@ import java.util.StringTokenizer;
  * @notes - DP, 2차원이라 어려웠다! 정복하자  <br>
  */
 
-public class g5_9251_LCS {
+public class g5_9251_LCS__2차원DP {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
