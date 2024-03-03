@@ -11,7 +11,8 @@ import java.util.StringTokenizer;
  * @notes - 그냥 단순 구현? -> 시간초과 바보야~
  */
 
-public class g5_27172_수나누기게임 {
+public class failed_g5_27172_수나누기게임 {
+    public static int maxN = 0;
     public static int[] cards;
     public static int[] scores;
 
@@ -27,7 +28,9 @@ public class g5_27172_수나누기게임 {
         st = new StringTokenizer(br.readLine());
         for (int n = 0; n < N; n++) {
             cards[n] = Integer.parseInt(st.nextToken());
+            maxN = Math.max(maxN, cards[n]);
         }
+
 
         // 게임 진행
         for (int player1 = 0; player1 < N; player1++) {
