@@ -11,7 +11,7 @@ import java.util.*;
  * @notes - 그냥 단순 구현? -> 시간초과 바보야~ -> nLog(n)
  */
 
-public class failed_g5_27172_수나누기게임 {
+public class g5_27172_수나누기게임 {
 
     public static HashMap<Integer, Integer> cards = new HashMap<>();
     public static List<Integer> numbers = new ArrayList<>();
