@@ -3,17 +3,20 @@ package BOJ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * @link https://www.acmicpc.net/problem
  * @date 2024.03.03
- * @notes - 그냥 단순 구현? -> 시간초과 바보야~
+ * @notes - 그냥 단순 구현? -> 시간초과 바보야~ -> nLog(n)
  */
 
 public class failed_g5_27172_수나누기게임 {
+
+    public static HashMap<Integer, Integer> cards = new HashMap<>();
+    public static List<Integer> numbers = new ArrayList<>();
     public static int maxN = 0;
-    public static int[] cards;
+
     public static int[] scores;
 
     public static void main(String[] args) throws IOException {
@@ -21,21 +24,29 @@ public class failed_g5_27172_수나누기게임 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
 
-        cards = new int[N];
         scores = new int[N];
 
         // 점수 입력받기
         st = new StringTokenizer(br.readLine());
-        for (int n = 0; n < N; n++) {
-            cards[n] = Integer.parseInt(st.nextToken());
-            maxN = Math.max(maxN, cards[n]);
+        for (int idx = 0; idx < N; idx++) {
+            int number = Integer.parseInt(st.nextToken());
+            cards.put(number, idx);
+            numbers.add(number);
+            maxN = Math.max(maxN, number);
         }
 
+        // 카드 숫자 오름차순
+        Collections.sort(numbers);
 
         // 게임 진행
-        for (int player1 = 0; player1 < N; player1++) {
-            for (int player2 = player1 + 1; player2 < N; player2++) {
-                playGame(player1, player2);
+        for (int smallN : numbers) {
+            for (int bigN = smallN * 2; bigN <= maxN; bigN += smallN) {
+//                System.out.println("smallN : " + smallN + " & bigN : " + bigN);
+                if (cards.containsKey(bigN)) {
+                    scores[cards.get(smallN)]++;
+                    scores[cards.get(bigN)]--;
+
+                }
             }
         }
 
@@ -45,15 +56,5 @@ public class failed_g5_27172_수나누기게임 {
             answer.append(score).append(" ");
         }
         System.out.println(answer);
-    }
-
-    private static void playGame(int player1, int player2) {
-        if (cards[player1] % cards[player2] == 0) {
-            scores[player2]++;
-            scores[player1]--;
-        } else if (cards[player2] % cards[player1] == 0) {
-            scores[player1]++;
-            scores[player2]--;
-        }
     }
 }
