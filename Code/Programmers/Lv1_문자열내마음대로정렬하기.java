@@ -2,6 +2,7 @@ package Programmers;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * @title Lv1 문자열내마음대로정렬하기
