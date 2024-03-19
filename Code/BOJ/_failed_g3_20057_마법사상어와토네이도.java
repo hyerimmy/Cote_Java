@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * @notes - <br>
  */
 
-public class failed_g3_20057_마법사상어와토네이도 {
+public class _failed_g3_20057_마법사상어와토네이도 {
     public static int N;
     public static int[][] dust;
 
