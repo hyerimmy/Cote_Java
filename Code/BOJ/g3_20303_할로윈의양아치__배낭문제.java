@@ -13,7 +13,7 @@ import java.util.*;
  * - 망할 배낭문제!!!! 바보야 배낭문제 알고리즘 제대로 알지도 못했으면서 왜 아는줄 알았던거니~~~ 기억해
  */
 
-public class g3_20303_할로윈의양아치 {
+public class g3_20303_할로윈의양아치__배낭문제 {
     public static int N, M, K;
     public static int[] candies;
 
