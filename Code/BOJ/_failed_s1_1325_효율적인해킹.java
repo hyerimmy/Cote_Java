@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * @date 2024.03.28
  * @notes - DFS <br>
  */
-public class failed_s1_1325_효율적인해킹 {
+public class _failed_s1_1325_효율적인해킹 {
     public static int N;
     public static boolean[][] canHack;
 
