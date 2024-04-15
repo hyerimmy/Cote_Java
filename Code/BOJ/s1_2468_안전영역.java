@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 /**
  * @link https://www.acmicpc.net/problem/2468
  * @date 2024.04.15
- * @notes - <br>
+ * @notes - 1트 성공 <br>
  */
 
 public class s1_2468_안전영역 {
