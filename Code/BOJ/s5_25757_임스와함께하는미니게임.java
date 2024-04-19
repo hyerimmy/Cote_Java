@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 /**
  * @link https://www.acmicpc.net/problem/25757
  * @date 2024.04.19
- * @notes - <br>
+ * @notes - 1트, 20분 <br>
  */
 
 /*
