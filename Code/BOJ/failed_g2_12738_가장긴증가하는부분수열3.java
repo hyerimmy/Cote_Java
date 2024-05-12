@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /**
  * @link https://www.acmicpc.net/problem/12738
  * @date 2024.05.13
- * @notes - <br>
+ * @notes - DP말고 이분탐색으로 바꿔보자!! <br>
  */
 
 public class failed_g2_12738_가장긴증가하는부분수열3 {
